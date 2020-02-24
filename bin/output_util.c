@@ -185,6 +185,222 @@ static char *protoList[NumProtos] = {
 	"MPLS"    // 137	MPLS-in-IP 
 };
 
+#define NumZBFWProtocols	207
+static char *ZBFWProtoList[NumZBFWProtocols] = {
+	"unknown_proto",		//  0
+	"tcp",					//  1
+	"udp",					//  2
+	"icmp",					//  3
+	"ftp",					//  4
+	"smtp",					//  5
+	"esmtp",				//  6
+	"realaudio",			//  7
+	"netshow",				//  8
+	"vdolive",				//  9
+	"rpc",					//  10
+	"msrpc",				//  11
+	"rcmd",					//  12
+	"exec",					//  13
+	"login",				//  14
+	"shell",				//  15
+	"streamworks",			//  16
+	"cuseeme",				//  17
+	"http",					//  18
+	"sqlnet",				//  19
+	"tftp",					//  20
+	"rtsp",					//  21
+	"sip",					//  22
+	"mgcp",					//  23
+	"skinny",				//  24
+	"dns",					//  25
+	"h323",					//  26
+	"h245",					//  27
+	"h225",					//  28
+	"h225_ras",				//  29
+	"pop3",					//  30
+	"imap",					//  31
+	"ymsgr",				//  32
+	"aim",					//  33
+	"msnmgr",				//  34
+	"test",					//  35
+	"netbios ns",			//  36
+	"netbios dgm",			//  37
+	"netbios ssn",			//  38
+	"gtvp0",				//  39
+	"gtpv1",				//  40
+	"test66",				//  41
+	"test64",				//  42
+	"gtp data",				//  43
+	"granular",				//  44
+	"ctrl max",				//  45
+	"ftp data",				//  46
+	"realaudio data",		//  47
+	"netshow data",			//  48
+	"vdolive data",			//  49
+	"rpc data",				//  50
+	"msrpc data",			//  51
+	"rcmd data",			//  52
+	"streamworks data",		//  53
+	"cuseeme data",			//  54
+	"sqlnet data",			//  55
+	"tftp data",			//  56
+	"rtsp data",			//  57
+	"sip rtp data",			//  58
+	"sip rtcp data",		//  59
+	"mgcp data",			//  60
+	"skinny data",			//  61
+	"h323  rtp audio",		//  62
+	"h323 rtcp audio",		//  63
+	"h323 rtp video",		//  64
+	"h323 rtcp video",		//  65
+	"h323 rtp data",		//  66
+	"h323 rtcp data",		//  67
+	"test data",			//  68
+	"max prot w stats",		//  69
+	"telnet",				//  70
+	"tacacs",				//  71
+	"https",				//  72
+	"gopher",				//  73
+	"finger",				//  74
+	"kerberos",				//  75
+	"pop2",					//  76
+	"nntp",					//  77
+	"snmp",					//  78
+	"ldap",					//  79
+	"ms sql",				//  80
+	"sybase sql",			//  81
+	"nfs",					//  82
+	"lotusnote",			//  83
+	"sap",					//  84
+	"echo",					//  85
+	"discard",				//  86
+	"daytime",				//  87
+	"netstat",				//  88
+	"ssh",					//  89
+	"time",					//  90
+	"tacacs ds",			//  91
+	"bootps",				//  92
+	"bootpc",				//  93
+	"dnsix",				//  94
+	"rtelnet",				//  95
+	"ident",				//  96
+	"sqlserv",				//  97
+	"ntp",					//  98
+	"pwdgen",				//  99
+	"cisco fna",			//  100
+	"cisco tna",			//  101
+	"cisco sys",			//  102
+	"sqlsrv",				//  103
+	"snmptrap",				//  104
+	"rsvd",					//  105
+	"send",					//  106
+	"xdmcp",				//  107
+	"bgp",					//  108
+	"irc",					//  109
+	"qmtp",					//  110
+	"ipx",					//  111
+	"dbase",				//  112
+	"imap3",				//  113
+	"rsvp tunnel",			//  114
+	"hp collector",			//  115
+	"hp managed node",		//  116
+	"hp alarm mgr",			//  117
+	"microsoft ds",			//  118
+	"creativeserver",		//  119
+	"creativepartnr",		//  120
+	"appleqtc",				//  121
+	"igmpv3lit",			//  122
+	"isakmp",				//  123
+	"biff",					//  124
+	"who",					//  125
+	"syslog",				//  126
+	"router",				//  127
+	"ncp",					//  128
+	"timed",				//  129
+	"irc serv",				//  130
+	"uucp",					//  131
+	"syslog conn",			//  132
+	"sshell",				//  133
+	"ldaps",				//  134
+	"dhcp failover",		//  135
+	"msexch routing",		//  136
+	"entrust svcs",			//  137
+	"entrust svc handler",	//  138
+	"nisco tdp",			//  139
+	"webster",				//  140
+	"gdoi",					//  141
+	"iscsi",				//  142
+	"cddbp",				//  143
+	"ftps",					//  144
+	"telnets",				//  145
+	"imaps",				//  146
+	"ircs",					//  147
+	"pop3s",				//  148
+	"socks",				//  149
+	"kazaa",				//  150
+	"ms sql m",				//  151
+	"ms sna",				//  152
+	"wins",					//  153
+	"ica",					//  154
+	"orasrv",				//  155
+	"rdb dbs disp",			//  156
+	"vqp",					//  157
+	"icabrowser",			//  158
+	"kermit",				//  159
+	"rsvp encap",			//  160
+	"l2tp",					//  161
+	"pptp",					//  162
+	"h323gatestat",			//  163
+	"r winsock",			//  164
+	"radius",				//  165
+	"hsrp",					//  166
+	"net8 cman",			//  167
+	"oracle em vp",			//  168
+	"oraclenames",			//  169
+	"oracle",				//  170
+	"cisco svcs",			//  171
+	"cisco net mgmt",		//  172
+	"stun",					//  173
+	"tr rsrb",				//  174
+	"ddns v3",				//  175
+	"ace svr",				//  176
+	"giop",					//  177
+	"ttc",					//  178
+	"ipass",				//  179
+	"clp",					//  180
+	"citriximaclient",		//  181
+	"sms",					//  182
+	"citriximaclient",		//  183
+	"realsecure",			//  184
+	"lotussmtap",			//  185
+	"cifs",					//  186
+	"ms dotnetster",		//  187
+	"tarantella",			//  188
+	"fcip port",			//  189
+	"ssp",					//  190
+	"iscsi target",			//  191
+	"mysql",				//  192
+	"ms cluster net",		//  193
+	"ldap admin",			//  194
+	"802.11 iapp",			//  195
+	"oem agent",			//  196
+	"rtc pm port",			//  197
+	"dbcontrol agent",		//  198
+	"ipsec msft",			//  199
+	"sip tls",				//  200
+	"pcanywheredata",		//  201
+	"pcanywherestat",		//  202
+	"x11",					//  203
+	"ircu",					//  204
+	"n2h2server",			//  205
+	"h323callsigalt",		//  206
+	"h225ras mcast",		//  207
+};
+
+char *L7ProtoString(int l7_proto_id) {
+		return ZBFWProtoList[l7_proto_id];
+	}
+
 char *ProtoString(uint8_t protoNum) {
 static char s[16];
 

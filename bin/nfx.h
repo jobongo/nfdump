@@ -908,6 +908,26 @@ typedef struct tpl_ext_48_s {
 
 #define EX_NEL_RESERVED_1	49
 
+
+/*
+ * EX_ZBFW_COMMON Block Allocation
+ * +----+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+ * |  0 |                     NF9_ZBFW_CLASS_ID                     |                       NF9_ZBFW_ZONEPAIR_ID                |
+ * +----+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+ * |  1 |     NF9_ZBFW_CTS_SRC_SGT    |     NF9_ZBFW_APP_ID         |                                                           |
+ * +----+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+ */
+
+#define EX_ZBFW_COMMON 50
+typedef struct tpl_ext_50_s {
+	uint32_t	class_map_id;
+	uint32_t	zp_id;
+	uint16_t	src_sgt;
+	uint16_t	l7_proto_id;
+	//uint16_t	fill;
+	uint8_t		data[4];	// points to further data
+} tpl_ext_50_t;
+
 /* 
  * V1 Extension map:
  * =================

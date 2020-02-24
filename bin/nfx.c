@@ -120,6 +120,9 @@ extension_descriptor_t extension_descriptor[] = {
 	{ EX_PORT_BLOCK_ALLOC, 	8,	32, 0,    	"NAT Port Block Allocation"},
 	{ EX_NEL_RESERVED_1,	0,	0, 0,		NULL},
 
+	// Cisco Zone Based Firewall Extensions
+	{ EX_ZBFW_COMMON,	   12,	33, 0,		"Cisco ZBFW block"},
+
 	// last entry
 	{ 0,	0,	0, 0,	NULL }
 };

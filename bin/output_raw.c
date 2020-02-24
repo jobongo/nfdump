@@ -518,6 +518,15 @@ extension_map_t	*extension_map = r->map_ref;
 				slen = STRINGSIZE - _slen;
 				break;
 #endif
+			case EX_ZBFW_COMMON:
+					snprintf(_s, slen-1,
+"  src sgt      =             %5u\n"
+"  l7 proto     =             %5s\n"
+"  cmap id      =         %9u\n"
+"  zp id        =         %9u\n"
+
+, r->src_sgt, L7ProtoString(r->l7_proto_id), r->class_map_id, r->zp_id);
+				break;
 			default:
 				snprintf(_s, slen-1, "Type %u not implemented\n", id);
 

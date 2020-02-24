@@ -351,6 +351,12 @@ static struct v9_element_map_s {
 	{ NF9_NPROBE_SERVER_NW_DELAY_SEC, 	 "NPROBE server lat sec",	_4bytes, _8bytes, move_slatency, nop, EX_LATENCY },
 	{ NF9_NPROBE_APPL_LATENCY_SEC, 	 	 "NPROBE appl lat sec",		_4bytes, _8bytes, move_slatency, nop, EX_LATENCY },
 
+    // Cisco ASR Zone Based Firewall Mapping
+	{ NF9_ZBFW_CLASS_ID, 				 "ZBFW Class ID",			_4bytes, _4bytes, move32, zero32, EX_ZBFW_COMMON },
+	{ NF9_ZBFW_ZONEPAIR_ID,				 "ZBFW ZP ID",				_4bytes, _4bytes, move32, zero32, EX_ZBFW_COMMON },
+ 	{ NF9_ZBFW_CTS_SRC_SGT,				 "ZBFW Source SGT",			_2bytes, _2bytes, move16, zero16, EX_ZBFW_COMMON },
+ 	{ NF9_ZBFW_APP_ID,				 	 "ZBFW L7 Protocol ID",		_2bytes, _2bytes, move16, zero16, EX_ZBFW_COMMON },
+
 	{0, "NULL",	0, 0}
 };
 
