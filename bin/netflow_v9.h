@@ -313,6 +313,18 @@ typedef struct common_header_s {
 #define NF9_NPROBE_APPL_LATENCY_SEC		57558
 #define NF9_NPROBE_APPL_LATENCY_USEC	57559
 
+// Cisco ZBFW HSL
+#define NF9_ZBFW_CTS_SRC_SGT			34000
+#define NF9_ZBFW_APP_ID					95
+#define NF9_ZBFW_APP_NAME				96
+//#define NF9_ZBFW_INGR_VRF_ID			234
+#define NF9_ZBFW_INGR_VRF_NAME			236
+//#define NF9_ZBFW_EXT_EVENT_ID			35001
+#define NF9_ZBFW_EXT_EVENT_DESC			35010
+#define NF9_ZBFW_ZONEPAIR_ID			35007
+#define NF9_ZBFW_ZONEPAIR_NAME			35009
+#define NF9_ZBFW_CLASS_ID				51
+#define NF9_ZBFW_CLASS_NAME				100
 /* prototypes */
 int Init_v9(int v, uint32_t sampling, uint32_t overwrite);
 
