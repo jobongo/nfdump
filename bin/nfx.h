@@ -924,7 +924,7 @@ typedef struct tpl_ext_50_s {
 	uint32_t	zp_id;
 	uint16_t	src_sgt;
 	uint16_t	l7_proto_id;
-	//uint16_t	fill;
+	uint32_t	fill;
 	uint8_t		data[4];	// points to further data
 } tpl_ext_50_t;
 
