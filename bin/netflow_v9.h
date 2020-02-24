@@ -313,7 +313,7 @@ typedef struct common_header_s {
 #define NF9_NPROBE_APPL_LATENCY_SEC		57558
 #define NF9_NPROBE_APPL_LATENCY_USEC	57559
 
-// Cisco ZBFW HSL
+// Cisco ZBFW HSL Specific Fields
 #define NF9_ZBFW_CTS_SRC_SGT			34000
 #define NF9_ZBFW_APP_ID					95
 #define NF9_ZBFW_APP_NAME				96

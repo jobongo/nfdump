@@ -397,7 +397,7 @@ static char *ZBFWProtoList[NumZBFWProtocols] = {
 	"h225ras mcast",		//  207
 };
 
-char *L7ProtoString(int l7_proto_id) {
+char *L7ProtoString(uint16_t l7_proto_id) {
 		return ZBFWProtoList[l7_proto_id];
 	}
 

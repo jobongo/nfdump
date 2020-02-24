@@ -449,8 +449,16 @@ void		*p = (void *)input_record;
 					output_record->block_end = output_record->block_start + output_record->block_size - 1;
 				p = (void *)tpl->data;
 			} break;
-			
+			case EX_ZBFW_COMMON: {
+				tpl_ext_50_t *tpl = (tpl_ext_50_t *)p;
+				output_record->class_map_id		= tpl->class_map_id;
+				output_record->zp_id			= tpl->zp_id;
+				output_record->src_sgt			= tpl->src_sgt;
+				output_record->l7_proto_id		= tpl->l7_proto_id;
+				p = (void *)tpl->data;
+			} break;
 #endif
+			
 		}
 	}
 	

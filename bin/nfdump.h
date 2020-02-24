@@ -659,6 +659,7 @@ typedef struct master_record_s {
 #	define OffsetUsername  NSEL_BASE_OFFSET+10
 	char username[72];
 
+
 	// NAT extensions
 	// NAT event is mapped into ASA event
 #define NAT_BASE_OFFSET     (offsetof(master_record_t, ingress_vrfid) >> 3)
@@ -705,8 +706,15 @@ typedef struct master_record_s {
 #endif
 
 #endif
+	// ZBFW Extensions
+		uint32_t	class_map_id;
+		uint32_t	zp_id;
+		uint16_t	src_sgt;
+		uint16_t	l7_proto_id;
 
-	// latency extension
+
+
+// latency extension
 	uint64_t	client_nw_delay_usec;	// index LATENCY_BASE_OFFSET 0xffff'ffff'ffff'ffff
 	uint64_t	server_nw_delay_usec;	// index LATENCY_BASE_OFFSET + 1 0xffff'ffff'ffff'ffff
 	uint64_t	appl_latency_usec;		// index LATENCY_BASE_OFFSET + 2 0xffff'ffff'ffff'ffff

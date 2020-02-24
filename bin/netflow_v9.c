@@ -1091,6 +1091,12 @@ size_t				size_required;
 			case EX_NEL_GLOBAL_IP_v4:
 				// XXX no longer used
 				break;
+			case EX_ZBFW_COMMON:
+				PushSequence( table, NF9_ZBFW_CLASS_ID, &offset, NULL, 0);
+				PushSequence( table, NF9_ZBFW_ZONEPAIR_ID, &offset, NULL, 0);
+				PushSequence( table, NF9_ZBFW_CTS_SRC_SGT, &offset, NULL, 0);
+				PushSequence( table, NF9_ZBFW_APP_ID, &offset, NULL, 0);
+				break;
 		}
 		extension_map->size += sizeof(uint16_t);
 		extension_map->extension_size += extension_descriptor[map_index].size;
